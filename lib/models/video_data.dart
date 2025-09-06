@@ -35,7 +35,7 @@ class VideoData {
   static const VideoData testVideo = VideoData(
     id: 'test_video',
     title: 'Test Video (Kısa)',
-    url: 'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4',
+    url: 'https://cdn.pixabay.com/video/2025/09/04/301721_large.mp4',
     fallbackUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
     thumbnailUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg',
     rewardBzp: 100,

@@ -11,7 +11,7 @@ class VideoRewardPlayer extends StatelessWidget {
   final RewardService rewardService;
   final void Function(VideoReward reward, UserRewards updated)? onRewardEarned;
 
-  const VideoRewardPlayer({
+  VideoRewardPlayer({
     super.key,
     required this.video,
     RewardService? rewardService,

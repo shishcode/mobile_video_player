@@ -1,16 +1,43 @@
-# video_player_mobile
+# Video Reward Mobile
 
-A new Flutter project.
+A Flutter implementation of a professional video reward experience featuring:
+- Anti-cheat progress bar (forward seek clamped until completion)
+- Encouragement modal on pause/idle to keep users engaged
+- Completion rewards: BZP and AkılTozu
+- Responsive, glassmorphic UI with fullscreen landscape playback
 
-## Getting Started
+## Quick Start
+1. Install dependencies:
+```bash
+flutter pub get
+```
+2. Run on a device/emulator:
+```bash
+flutter run
+```
+3. Build APK:
+```bash
+flutter build apk --release
+```
 
-This project is a starting point for a Flutter application.
+## Files of Interest
+- `lib/widgets/video/video_reward_player.dart`: Facade widget to drop into any app
+- `lib/screens/video_reward_screen.dart`: Reward logic container
+- `lib/widgets/video/custom_video_player.dart`: Custom player & controls
+- `lib/services/reward_service.dart`: Reward orchestration (injectable)
+- `lib/services/reward_storage.dart`: Storage abstraction
+- `lib/services/reward_storage_shared_prefs.dart`: Default SharedPreferences storage
+- `lib/models/*`: `VideoData`, `VideoReward`, `UserRewards`
 
-A few resources to get you started if this is your first Flutter project:
+## Implementation Guide (For Mustafa)
+Please follow the step-by-step instructions in `implementation.md` to integrate this into the main app. It includes:
+- How to plug in your own storage
+- How to listen to reward events
+- How to customize videos and UI
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+> See: `implementation.md`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Notes
+- iOS requires CocoaPods; run `pod install` inside `ios/` after `flutter pub get`.
+- Internet permission is already configured for Android.
+- Fullscreen toggles immersive landscape and hides non-video UI in landscape.

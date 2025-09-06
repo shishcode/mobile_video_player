@@ -240,13 +240,7 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
 
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: _isFullscreen
-          ? null
-          : AppBar(
-              title: const Text('Video Ödül Sistemi'),
-              backgroundColor: Colors.black,
-              foregroundColor: Colors.white,
-            ),
+      appBar: null,
       body: SafeArea(
         top: !_isFullscreen,
         bottom: !_isFullscreen,
